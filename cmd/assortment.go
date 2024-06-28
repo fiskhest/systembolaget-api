@@ -10,7 +10,7 @@ import (
 	"os/signal"
 	"time"
 
-	"github.com/alexgustafsson/systembolaget-api/v4/systembolaget"
+	"github.com/fiskhest/systembolaget-api/v4/systembolaget"
 	"github.com/urfave/cli/v2"
 )
 
