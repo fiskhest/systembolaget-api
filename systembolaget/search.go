@@ -26,7 +26,15 @@ type SearchResult struct {
 		FullAssortmentDocumentCount  int    `json:"fullAssortmentDocCount"`
 		NextPage                     int    `json:"nextPage"`
 		PriceRange                   Range  `json:"priceRange"`
-		VolumeRange                  Range  `json:"volumeRange"`
+		VolumeRange                  Range  `json:"volupage=1
+size=30
+sortBy=Score
+sortDirection=Ascending
+productLaunch.min=2024-07-01
+productLaunch.max=2024-07-01
+assortmentText=Lokalt%20%26%20Sm%C3%A5skaligt
+storeId=1408
+isInStoreAssortmentSearch=truemeRange"`
 		AlcoholPercentageRange       Range  `json:"alcoholPercantageRange"`
 		SugarContentRange            Range  `json:"sugarContentRange"`
 		SugarContentGramsPer100Range Range  `json:"sugarContentGramPer100mlRange"`
@@ -204,6 +212,7 @@ type SearchFilter func(*url.Values)
 func FilterByStore(store string) SearchFilter {
 	return func(v *url.Values) {
 		v.Set("storeId", store)
+		v.Set("isInStoreAssortmentSearch", "true")
 	}
 }
 
@@ -358,7 +367,15 @@ func FilterByCategory(category string, subcategory string, subsubcategory string
 			if subsubcategory != "" {
 				v.Add("categoryLevel3", subsubcategory)
 			}
-		}
+		}page=1
+size=30
+sortBy=Score
+sortDirection=Ascending
+productLaunch.min=2024-07-01
+productLaunch.max=2024-07-01
+assortmentText=Lokalt%20%26%20Sm%C3%A5skaligt
+storeId=1408
+isInStoreAssortmentSearch=true
 	}
 }
 
