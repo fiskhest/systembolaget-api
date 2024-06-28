@@ -22,19 +22,11 @@ type Range struct {
 // SearchResult contains the raw result of a query.
 type SearchResult struct {
 	Metadata struct {
-		DocumentCount                int    `json:"docCount"`
+		DocumentCount                int    `json:"docCount"`page=1
 		FullAssortmentDocumentCount  int    `json:"fullAssortmentDocCount"`
 		NextPage                     int    `json:"nextPage"`
 		PriceRange                   Range  `json:"priceRange"`
-		VolumeRange                  Range  `json:"volupage=1
-size=30
-sortBy=Score
-sortDirection=Ascending
-productLaunch.min=2024-07-01
-productLaunch.max=2024-07-01
-assortmentText=Lokalt%20%26%20Sm%C3%A5skaligt
-storeId=1408
-isInStoreAssortmentSearch=truemeRange"`
+		VolumeRange                  Range  `json:"volupage=1`
 		AlcoholPercentageRange       Range  `json:"alcoholPercantageRange"`
 		SugarContentRange            Range  `json:"sugarContentRange"`
 		SugarContentGramsPer100Range Range  `json:"sugarContentGramPer100mlRange"`
@@ -367,15 +359,7 @@ func FilterByCategory(category string, subcategory string, subsubcategory string
 			if subsubcategory != "" {
 				v.Add("categoryLevel3", subsubcategory)
 			}
-		}page=1
-size=30
-sortBy=Score
-sortDirection=Ascending
-productLaunch.min=2024-07-01
-productLaunch.max=2024-07-01
-assortmentText=Lokalt%20%26%20Sm%C3%A5skaligt
-storeId=1408
-isInStoreAssortmentSearch=true
+		}
 	}
 }
 
